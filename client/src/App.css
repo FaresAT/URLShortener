@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background-color: #404040;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: aliceblue;
+    height: 100vh;
+    text-align: center;
+    padding: 10vh;
+}
+
+/*.header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
