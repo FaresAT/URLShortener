@@ -1,7 +1,11 @@
-const ShortLink = ({newUrl}) => {
+import "./ShortLink.css"
 
+const ShortLink = ({newUrl}) => {
     return (
-        <a href={newUrl}>{newUrl}</a>
+        <div>
+            {/*<a className={'success'}href={newUrl}>{newUrl}</a>*/}
+            {newUrl==='' ? null : <a className={'success'} href={newUrl}>{newUrl}</a>}
+        </div>
     )
 };
 

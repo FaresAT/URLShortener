@@ -1,0 +1,11 @@
+.success {
+    margin: 10px 0px;
+    padding:12px;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}

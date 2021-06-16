@@ -1,9 +1,8 @@
-const Header = () => {
+import './Header.css'
 
+const Header = () => {
     return (
-        <div>
-            <h1>Enter a link to shorten</h1>
-        </div>
+        <h1 className={"header"}>Enter a link to shorten</h1>
     )
 };
 

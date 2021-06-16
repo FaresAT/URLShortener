@@ -1,31 +1,41 @@
 import Header from './components/Header/Header'
+import Customize from "./components/Customize/Customize";
 import ShortField from './components/ShortField/ShortField'
 import ShortLink from "./components/ShortLink/ShortLink"
 import ErrorMsg from './components/ErrorMsg/ErrorMsg'
-import About from './components/About/About'
 
 import './App.css'
 
 import { useState } from 'react'
 
 const App = () => {
-    const [urlToShorten, seturlToShorten] = useState('')
-    const [shortenedUrl, setshortenedUrl] = useState('')
-    const [err, seterr] = useState('')
+    const [urlToShorten, setUrlToShorten] = useState('')
+    const [shortenedUrl, setShortenedUrl] = useState('')
+    const [err, setErr] = useState('')
+    const [customURL, setCustomURL] = useState('')
+    const [customize, setCustomize] = useState(false)
 
     return (
         <div className={'app'}>
             <Header />
-            <ShortField
-                url={urlToShorten}
-                urlChange={seturlToShorten}
-                setShortened={setshortenedUrl}
-                seterr={seterr}
-            />
+            <div className={'shortening'}>
+                <div className={'spacing'}>
+                    <Customize setCustomize={setCustomize} customize={customize} setCustomUrl={setCustomURL} />
+                    <label>Use Custom URL?</label>
+                </div>
+                    <ShortField
+                        url={urlToShorten}
+                        urlChange={setUrlToShorten}
+                        setShortened={setShortenedUrl}
+                        setErr={setErr}
+                        customize={customize}
+                        customURL={customURL}
+                        setCustomURL={setCustomURL}
+                    />
+            </div>
             <div>
                 {err ? ( <ErrorMsg err={err}/> ) : ( <ShortLink newUrl={shortenedUrl}/> )}
             </div>
-            <About />
         </div>
     )
 };

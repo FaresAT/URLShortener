@@ -10,12 +10,21 @@
     color: aliceblue;
     height: 100vh;
     text-align: center;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    font-size: 3vh;
+
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.shortening {
     padding: 10vh;
 }
 
-/*.header {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    margin-bottom: 20px;*/
-/*}*/
+.spacing {
+    width: 20vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}

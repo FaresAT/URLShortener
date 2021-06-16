@@ -1,7 +1,11 @@
+import './ErrorMsg.css'
+
 const ErrorMsg = ({err}) => {
 
     return (
-        <p>{err}</p>
+        <div className={"error"}>
+            <i>Error: {err}</i>
+        </div>
     )
 };
 
